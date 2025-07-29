@@ -1,0 +1,47 @@
+from datetime import datetime
+
+def is_leap_year(year):
+    if year % 4 != 0:
+        return False
+    elif year % 100 != 0:
+        return True
+    else:
+        return year % 400 == 0
+
+def get_age(birth_date):
+    today = datetime.today()
+    age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+    return age
+
+def display_cake(candles):
+    candle_part = "_" * (5 + candles) + "i" * candles + "_" * (5 + candles)
+    print(f"      {candle_part}")
+    print("      |:H:a:p:p:y:|")
+    print("    __|___________|__")
+    print("   |^^^^^^^^^^^^^^^^^|")
+    print("   |:B:i:r:t:h:d:a:y:|")
+    print("   |                 |")
+    print("   ~~~~~~~~~~~~~~~~~~~")
+
+# Get user's birthdate
+birthdate_str = input("Please enter your birthdate in the format DD/MM/YYYY: ")
+try:
+    birthdate = datetime.strptime(birthdate_str, "%d/%m/%Y")
+except ValueError:
+    print("Invalid date format. Please use DD/MM/YYYY.")
+    exit()
+
+# Calculate age and candles
+age = get_age(birthdate)
+last_digit = age % 10
+candles = last_digit if last_digit != 0 else 10  # If age ends with 0, use 10 candles
+
+# Display cake(s)
+if is_leap_year(birthdate.year):
+    print("\nYou were born in a leap year! Here are two cakes for you:\n")
+    display_cake(candles)
+    print()
+    display_cake(candles)
+else:
+    print("\nHere's your birthday cake:\n")
+    display_cake(candles)
