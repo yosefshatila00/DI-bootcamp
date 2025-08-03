@@ -12,3 +12,10 @@ print(a)
 print(b)
 print(c)
 print(d)
+
+a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+
+print(a_dict.items())
+
+for key, value in a_dict.items():
+    print(key, '->', value)
