@@ -10,16 +10,13 @@ for index, char in enumerate(word):
 
 print( char_index)
 
+print("\n")
+print("\n")
 
 items_purchase={"water": "$2", "bread": "$1.5", "milk":"$3", "eggs":"$5"}
 wallet="$10"
 print(items_purchase.items())
 print(wallet)
-
-
-
-print("\n")
-print("\n")
 
 clean_prices = {}
 for item, price in items_purchase.items():
@@ -36,7 +33,9 @@ for item, price in clean_prices.items():
 
 
 affordable_sorted=sorted(affordable)
-
-print(affordable_sorted)
+if affordable_sorted == []:
+    print("nothing affordable")
+else:
+    print(f"affordable items are:{affordable_sorted}")
 
 
