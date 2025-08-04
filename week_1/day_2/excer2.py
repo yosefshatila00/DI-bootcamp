@@ -57,12 +57,58 @@ for i in range(number_fruits):
     fruit=input(f"enter fruit: ")
     favorite_fruits.append(fruit)
 
-print(favorite_fruits)
-
 check_fruit=input("enter a fruit to check if it's in your favorite fruits: ")
 if check_fruit in favorite_fruits:
     print(f"You chose one of your favorite fruits! Enjoy!")
 else:
     print("You chose a new fruit. I hope you enjoy it!")
+
+
+topping_list=[]
+i=0
+while topping_list != "quit":
+    
+    topping=input("enter a topping you want to add to your pizza (or type 'quit' to finish): ")
+    
+    if topping=="quit":
+        break
+    else:
+        topping_list.append(topping)
+
+print("Your pizza toppings are:", topping_list)
+
+length=len(topping_list)
+price=2.5*length+10
+print(f"the price is ${price}")
+
+
+
+number_people=int(input("how many people are in your group? "))
+for i in range(number_people):
+    age=int(input(f"enter age of person {i+1}: "))
+    if age < 3:
+        print("the ticket is free")
+    elif age<12:
+        print("the ticket is $10")
+        price=price+10
+    else:
+        print("the ticket is $15")
+        price=price+15
+
+print(f"the total price is ${price}")
+
+sandwich_orders = ["Tuna", "Pastrami", "Avocado", "Pastrami", "Egg", "Chicken", "Pastrami"]
+
+while "Pastrami" in sandwich_orders:
+    sandwich_orders.remove("Pastrami")
+print(sandwich_orders)
+
+finished_sandwiches = []
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+    print(f"I made your {sandwich} sandwich.")
+
+print("All sandwiches have been made:", finished_sandwiches)
+
 
 
