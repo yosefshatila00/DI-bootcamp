@@ -1,0 +1,12 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_2/day_2/miniproject.py
+suggestions for improvement:
+- Improve input validation in `player_input()` to handle non-integer inputs more gracefully.  Currently, a non-integer input will cause a ValueError.
+- The `check_tie` function can be simplified. It iterates through the board twice; a single iteration is sufficient.
+- Add a clear game introduction explaining how to play (e.g., enter row and column numbers).
+- Consider adding more descriptive variable names (e.g., `player_symbol` instead of `player`).
+Brief justification:
+- correctness: The code implements the core Tic-Tac-Toe game logic as described in the chapter. It uses 2D lists to represent the board, functions for input, display, win-check, and tie-check, and a main loop to manage game flow.  However, the input validation could be more robust (it misses non-integer error handling). The win-check logic is correct but could be made slightly more efficient. The tie-check is functionally correct but has redundancy.  Overall, it satisfies most of the requirements, achieving a high correctness score.
+- readability: The code is reasonably readable, with clear function names and straightforward logic within most functions. However,  some variable names could be more descriptive.  The input validation part could be made more readable by using a single check.   The structure is generally well-organized, but some minor improvements would enhance clarity.
+- performance: The code's performance is acceptable for a game of this size. The win-checking algorithm has a time complexity of O(n), which is efficient for a 3x3 board.  The redundant check in `check_tie` slightly reduces performance; optimizing this would improve efficiency.  The recursion in `player_input` adds minor overhead, but it's not significantly impactful for this scale.
+- security: The code doesn't have any obvious security vulnerabilities. It relies solely on user input and doesn't interact with external resources or handle sensitive data, therefore the security score is high.
+
