@@ -1,32 +1,22 @@
-sample_dict = { 
-   "class":{ 
-      "student":{ 
-         "name":"Mike",
-         "marks":{ 
-            "physics":70,
-            "history":80
-         }
-      }
-   }
-}
-print(sample_dict["class"]["student"]["marks"]["history"])
+users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+dict_1={}
+dict_2={}
+dict_3={}
+sort_list=[]
 
-sample_dict = {
-  "name": "Kelly",
-  "age":25,
-  "salary": 8000,
-  "city": "New york"
-}
-keys_to_remove = ["name", "salary"]
-for key in keys_to_remove:
-    if key in sample_dict:
-        del sample_dict[key]
+for i in range(len(users)):
+    dict_1[users[i]]=i
 
-print(sample_dict)    
+print(dict_1)
 
+for i in range(len(users)):
+    dict_2[i]=users[i]
 
-rick_dict = {
-    'first_name':'Rick',
-    'last_name':'Sanchez'
-}
-print(rick_dict.items())
+print(dict_2)
+
+sort_list=sorted(users)
+
+for i in range(len(users)):
+    dict_3[sort_list[i]]=i
+
+print(dict_3)
