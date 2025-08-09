@@ -1,0 +1,12 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_1/day_1/exercises/exerc.py
+suggestions for improvement:
+- Exercise 3: The code does not provide the correct output for comparing integers with strings.  It should explicitly state the type error that would occur instead of 'error'.
+- Exercise 3:  The comparison of "Hello" and "hello" should explicitly show that it evaluates to `False` due to case sensitivity.
+- Exercise 6: The code is missing error handling. If the user enters non-numeric input, a `ValueError` will occur. Input validation is crucial.
+- Exercise 7: Add a more descriptive message indicating whether the number is odd or even. For instance: 'The number you entered, 5, is odd'.
+Brief justification:
+- correctness: The code correctly implements most exercises, demonstrating the use of print statements, variables, mathematical operations, comparison operators, if statements, and user input, as outlined in the chapter content. However, it lacks complete handling of error cases and detailed output for certain comparison operators. The issues described in Exercise 3 are missing correct evaluation and error reporting. The missing error handling in Exercise 6 is a significant omission. 
+- readability: The code is generally well-structured and easy to understand. Variable names are descriptive, and the code is well-commented where necessary. Some improvements in error handling and output formatting would enhance readability.
+- performance: The code's performance is excellent.  All operations are efficient and there are no unnecessary computations.
+- security: No security vulnerabilities are present in this code because it doesn't interact with external systems or handle sensitive data.
+

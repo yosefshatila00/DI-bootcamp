@@ -1,0 +1,11 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_1/day_2/daily_challange.py
+suggestions for improvement:
+- Add more robust input validation to handle non-integer inputs in Challenge 1.  For example, use a `while` loop and a `try-except` block to ensure the user provides valid integers.
+- The code for Challenge 1 could be slightly improved by using a list comprehension for conciseness.  This is a matter of style and not strictly necessary for correctness.
+- In Challenge 2, consider adding a comment explaining the logic behind checking `len(output)==0 or char !=output[-1]` to enhance readability for others.
+Brief justification:
+- correctness: Both challenges are correctly implemented according to the instructions in the Chapter Content/Questions. Challenge 1 accurately generates a list of multiples based on user input, utilizing loops, lists, and basic arithmetic as specified.  Challenge 2 correctly removes consecutive duplicate letters from a string using loops and conditional statements, precisely fulfilling the challenge requirements. The code directly addresses the problems outlined in the chapter and uses the Python topics mentioned (input(), loops, lists, strings, conditional statements, and string manipulation).
+- readability: The code is generally readable, using clear variable names and straightforward logic. However, adding comments and more robust input handling (as suggested in the feedback) would enhance readability and maintainability.  The structure is logical, and the code is easy to follow, although comments would enhance understanding.
+- performance: The code's performance is efficient for the given tasks. The loops have a linear time complexity, which is appropriate given the problem size. There are no unnecessary computations or inefficient data structures used.
+- security: The code does not present any security vulnerabilities because it only deals with user input that is directly printed or used for calculations. There is no interaction with external systems or sensitive data.
+
