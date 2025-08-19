@@ -1,0 +1,14 @@
+from faker import Faker
+
+users = []
+fake = Faker()
+
+for _ in range(5):
+    user = {
+        'name': fake.name(),
+        'address': fake.address(),
+        'language_code': fake.language_code()
+    }
+    users.append(user)
+
+print(users)

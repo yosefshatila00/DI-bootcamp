@@ -1,0 +1,20 @@
+import datetime
+
+    
+current_datetime = datetime.datetime.now()
+    
+next_year = current_datetime.year + 1
+january_first = datetime.datetime(next_year, 1, 1)
+    
+time_difference = january_first - current_datetime
+    
+print(f"Current date and time: {current_datetime}")
+print(f"Time until January 1st, {next_year}: {time_difference}")
+    
+days = time_difference.days
+hours, remainder = divmod(time_difference.seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
+    
+print(f"\nDetailed breakdown:")
+print(f"{days} days, {hours} hours, {minutes} minutes, {seconds} seconds")
+

@@ -1,0 +1,9 @@
+import datetime
+
+birthdate = input("Enter your birthdate (YYYY-MM-DD): ")
+birth_datetime = datetime.datetime.strptime(birthdate, '%Y-%m-%d')
+current_datetime = datetime.datetime.now()
+
+minutes_lived = int((current_datetime - birth_datetime).total_seconds() / 60)
+
+print(f"You have lived: {minutes_lived} minutes!")

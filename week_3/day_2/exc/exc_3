@@ -1,0 +1,12 @@
+import string
+import random
+
+
+all_letters = string.ascii_letters  
+
+random_string = ''
+for _ in range(5):
+    random_char = random.choice(all_letters)
+    random_string += random_char
+
+print(random_string)
