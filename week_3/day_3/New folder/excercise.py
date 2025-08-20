@@ -2,10 +2,7 @@ import random
 import os
 
 def get_words_from_file(file_name="words.txt"):
-    """Read words from a text file in the same directory as this script."""
-    # Get the directory where this script is located
     script_dir = os.path.dirname(os.path.realpath(__file__))
-    # Create the full path to the file
     file_path = os.path.join(script_dir, file_name)
     
     try:
