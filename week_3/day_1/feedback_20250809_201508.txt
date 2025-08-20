@@ -1,0 +1,12 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_3/day_1/excer.py
+suggestions for improvement:
+- In `PetDog.do_a_trick()`, the print statement uses curly braces `{}` around the trick, which prints a dictionary representation instead of the trick string itself.  Change it to `print(trick)`.
+- The `run_speed` calculation in the `Dog` class could be improved for clarity and to avoid potential division by zero errors. Add a check to ensure the age is not 0 before performing the calculation.
+- Add docstrings to all classes and methods to improve readability and explain their purpose and functionality.
+- Consider using more descriptive variable names (e.g., instead of `run` in `Dog.run_speed`, use `speed`).
+Brief justification:
+- correctness: The code largely addresses the exercises.  Exercise 1 (Pets and Cats) is correctly implemented, demonstrating inheritance and polymorphism. Exercise 2 (Dogs) implements the `Dog` class and methods as specified, although the `run_speed()` method lacks a zero check. Exercise 3 (PetDogs) successfully inherits from `Dog` and adds the new methods with the `*args` and `super()`. Exercise 4 (Family and Person) is implemented correctly, showcasing class interaction and object creation. The minor issues noted in the feedback do not significantly detract from the overall correctness, but they should be addressed for completeness.
+- readability: The code is generally readable, but could be improved with more descriptive variable names and comments, especially in the calculation of `run_speed`. The addition of docstrings would significantly improve understanding. The naming of classes could also be improved (e.g., `siamese` to `Siamese`).
+- performance: The performance is acceptable. The algorithms used are straightforward and efficient for the given tasks.  There is potential for very slight optimization in the `run_speed()` method by adding a check for a zero age.
+- security: There are no apparent security vulnerabilities in the code. The code does not interact with external systems or handle user input in a way that could expose it to security risks.
+

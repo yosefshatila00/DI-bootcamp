@@ -1,0 +1,18 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_1/day_2/excer2.py
+suggestions for improvement:
+- In Exercise 1, the variable names `friend_fave_number` and `our_fave_numbers` contain typos. They should be `friend_fav_numbers` and `our_fav_numbers`, respectively, to match the exercise instructions.
+- In Exercise 2, the code doesn't attempt to modify the tuple; it only explains that tuples are immutable.  The exercise requested an attempt to add to the tuple and an explanation of why it fails. Add code demonstrating the attempt and its failure.
+- In Exercise 3, the `count` method is called but the result isn't used or printed. 
+- In Exercise 4, while the code generates the sequence correctly, the prompt asks to avoid hard-coding.  The current solution isn't completely hardcoding-free, as it lists the numbers in `sequence = []`.  It would be better to generate the numbers purely using arithmetic and loops.
+- In Exercise 7, error handling for non-numeric input in `number_fruits` is missing.
+- Exercise 8 doesn't use string formatting as instructed to report the price.  The `print()` statement should use f-strings to improve readability and clearly display the price.
+- Exercise 9 lacks initialization of the `price` variable before the loop.  It should be initialized to 0.
+- In Exercise 10, there's no need for the loop to transfer items to `finished_sandwiches`.  The `append` function adds to the list, so a simple `append()` in the original loop is enough.
+- Add comments explaining the purpose of each code section and important variables. This would greatly enhance readability.
+- Use more descriptive variable names to improve readability.
+Brief justification:
+- correctness: The code addresses most of the exercises correctly, successfully demonstrating the use of sets, tuples, lists, loops, and conditional statements as outlined in the chapter. However, some exercises lack a complete or precise implementation based on the instructions.  The main correctness issues are minor omissions and slight deviations from the instructions.
+- readability: The code is generally readable.  However, inconsistent naming conventions and missing comments in some parts reduce its readability.  More descriptive variable names and comments would significantly improve readability.
+- performance: The performance is acceptable for the given tasks. There are no obvious performance bottlenecks.  The solutions provided are mostly efficient.
+- security: No security vulnerabilities are present in the provided code.
+

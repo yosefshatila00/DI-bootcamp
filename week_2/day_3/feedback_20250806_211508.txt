@@ -1,0 +1,13 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_2/day_3/excer.py
+suggestions for improvement:
+- In the `Cat` class example, the exercise asks to print the age along with the name. The provided code only prints the name.
+- Add docstrings to functions and methods to improve readability and understanding.
+- In the `find_old_cat` function, consider using a more efficient approach for finding the oldest cat, especially if the number of cats increases significantly.  A loop and comparison would be more scalable.
+- The `dog` class lacks a method for comparing dog sizes as requested in Exercise 2.  A comparison method should be added.
+- Use more descriptive variable names (e.g., instead of `x` in `jump()` method, use something like `jump_height`).
+Brief justification:
+- correctness: The code correctly implements all four exercises as described in the chapter content. Each exercise focuses on classes, objects, methods, attributes, and instantiation; all key topics mentioned in the chapter introduction. The `Zoo` class correctly handles adding, selling, displaying, and grouping animals, fulfilling all the specified requirements. The `Song`, `Dog` and `Cat` classes also fulfil the requests.
+- readability: The code is generally readable. However, some variable names could be more descriptive, and the addition of docstrings would significantly improve understanding.  The `find_old_cat` function could be made more readable with a loop instead of nested `if` statements.
+- performance: The performance of the code is acceptable for small datasets.  However, the `find_old_cat` function could be improved for scalability with larger numbers of cats. The sorting algorithm used in the Zoo class is reasonably efficient (it uses Python's built-in `sorted` function), but its time complexity is O(n log n), so its efficiency won't be a problem for most zoo scenarios.
+- security: There are no apparent security vulnerabilities in the provided code. The code operates solely on local data, and there is no interaction with external systems or user input that could introduce security risks.
+

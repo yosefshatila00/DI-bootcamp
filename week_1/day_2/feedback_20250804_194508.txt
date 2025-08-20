@@ -1,0 +1,14 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_1/day_2/excer2.py
+suggestions for improvement:
+- In Exercise 1, the variable name `friend_fave_number` has a typo; it should be `friend_fav_numbers` for consistency.
+- Exercise 4 could be improved by using a more concise method to generate the float sequence, such as list comprehension.
+- In Exercise 7, error handling could be added to handle non-numeric input for the number of fruits.
+- Exercise 8's loop condition `topping_list != 'quit'` is incorrect. It should check if the `topping` variable equals 'quit'.
+- Exercise 9 lacks initialization of the `price` variable before the loop.
+- In Exercise 10, the loop to move sandwiches from `sandwich_orders` to `finished_sandwiches` is inefficient; it can be simplified.
+Brief justification:
+- correctness: The code generally addresses the exercises correctly, implementing the core functionalities of sets, tuples, lists, loops, and conditional statements as outlined in the chapter content. However, minor errors and inefficiencies reduce the overall correctness score.  For instance, the core logic of each exercise (using sets, tuples, lists, and loops) is mostly correct, fulfilling the chapter's objectives.  However, some minor logical flaws, like the loop condition in Exercise 8, reduce the score.
+- readability: The code is mostly readable with clear variable names and straightforward logic.  However, some improvements could enhance readability, particularly in the loop conditions and variable naming (Exercise 1). The use of comments is helpful.
+- performance: The code's performance is generally good, but some parts could be optimized for efficiency.  For instance, the method of creating the float sequence in Exercise 4 and the sandwich-moving loop in Exercise 10 could be more efficient. 
+- security: The code doesn't have any obvious security vulnerabilities, as it only deals with user input and basic data manipulation.
+

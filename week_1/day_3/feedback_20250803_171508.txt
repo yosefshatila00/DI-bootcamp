@@ -1,0 +1,12 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_1/day_3/daily.exc.py
+suggestions for improvement:
+- In Challenge 1, the code correctly creates the letter index dictionary as specified, aligning with the chapter's focus on dictionaries, loops, and conditional statements. However, error handling (e.g., for non-alphabetic input) could be improved.
+- In Challenge 2, the code effectively cleans the price data, determines affordable items, and sorts them.  The handling of the 'Nothing' case is also correct.  However, the code directly prints the result instead of returning it as instructed.
+- Both challenges could benefit from more descriptive variable names (e.g., `item_prices` instead of `items_purchase`).
+- Add docstrings to explain the purpose of functions and complex code blocks for better readability.
+Brief justification:
+- correctness: The code accurately addresses both challenges.  Challenge 1 successfully uses dictionaries, loops, and conditionals to create the letter index dictionary as per the requirements. Challenge 2 correctly processes the price data, identifies affordable items, sorts them, and handles the empty list case.  The minor deviation in Challenge 2 (printing instead of returning) is noted.
+- readability: The code is generally readable, but improvements can be made. More descriptive variable names would enhance understanding.  Adding comments would explain complex logic and improve maintainability. The use of `f-strings` is positive and enhances readability in the final output.
+- performance: The performance of both algorithms is quite efficient; the time complexity for both is linear O(n), which is optimal given the requirements.  There are no unnecessary computations or inefficient data structures.
+- security: The code doesn't introduce any security vulnerabilities. It directly uses user inputs without any external data sources or sensitive operations, making it secure in this context.
+

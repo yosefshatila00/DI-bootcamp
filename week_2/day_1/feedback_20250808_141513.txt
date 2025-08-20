@@ -1,0 +1,11 @@
+URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_2/day_1/excecise.py
+suggestions for improvement:
+- In `discribe_city`, consider using a more descriptive name like `describe_city` for better readability.
+- The `make_great` function in the magician's exercise should modify the list in place rather than just printing modified names.  It should update the original `magician_names` list.
+- Add error handling in the `pick_num` function to ensure the user inputs a valid number (between 1 and 100).
+Brief justification:
+- correctness: The code successfully implements the functionality described in exercises 1, 2, 3, 5, 6, and 7. Exercise 4 has a minor issue (comparison outside of a function) but is largely functional.  Exercise 6's `make_great` function needs improvement to modify the list in place as requested. The overall correctness is high because it addresses the core requirements of most exercises.
+- readability: The code is generally readable. Function names could be more descriptive in some cases (e.g., `discribe_city`).  Consistent use of snake_case for variable and function names would improve readability.
+- performance: The code's performance is efficient for the tasks it performs.  No significant performance bottlenecks are present.
+- security: The code doesn't present any obvious security vulnerabilities.  It operates within the defined scope of the exercises.
+
