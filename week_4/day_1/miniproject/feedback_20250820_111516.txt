@@ -1,0 +1,15 @@
+URL: URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_4/day_1/miniproject/anagram_checker.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_4/day_1/miniproject/anagrams.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/yosefshatila00/DI-bootcamp/blob/main/week_4/day_1/miniproject/mini.txt
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
