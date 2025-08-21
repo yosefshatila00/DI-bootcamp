@@ -1,48 +1,65 @@
 from anagram_checker import anagramchecker
 
-
 def show_menu():
-    print("1: input a word")
-    print("2: exit")
+    print("1: Input a word")
+    print("2: Exit")
 
-def user_input():
-    word=input("enter a word: ").strip()
-
+def get_user_input():
     while True:
-        if word=="exit":
+        word = input("\nEnter a word (or type exit to go back): ").strip()
+        
+        if word.lower() == 'exit':
             return None
+        
+        if not word:
+            print("Please enter a word!")
+            continue
+            
         if not word.isalpha():
-            print("only letters and no spaces or numbers")
+            print("Only alphabetic characters allowed!")
             continue
-        if " " in word:
-            print("only 1 word")
-            continue
-
+            
         return word
-    
-checker=anagramchecker("mini.txt")
+
+checker = anagramchecker("sowpods.txt")
+
 while True:
     show_menu()
-    x=int(input("enter your choice 1 or 2\n"))
-    if x==1:
-        word=user_input()
-        if checker.is_valid_word(word):
-            anagram=checker.get_anagrams(word)
-            if anagram:
-                print(f"Anagrams for your word: {', '.join(anagram)}")
+    
+    try:
+        choice = input("\nEnter your choice (1 or 2): ").strip()
+        
+        if choice == '1':
+            word = get_user_input()
+            
+            if word is None:  
+                continue
+                
+            if checker.is_valid_word(word):
+                anagrams = checker.get_anagrams(word)
+                
+                print(f"\nYOUR WORD: \"{word.upper()}\"")
+                print("This is a valid English word.")
+                
+                if anagrams:
+                    print(f"Anagrams for your word: {', '.join(anagram.upper() for anagram in anagrams)}")
+                else:
+                    print("No anagrams found for this word.")
             else:
-                print("no anagrams found")
+                print(f"\nYOUR WORD: \"{word.upper()}\"")
+                print("This is NOT a valid English word.")
+                
+        elif choice == '2':
+            print("bye")
+            break
+            
         else:
-            print(f"{word} is an invalid word")
-    elif x==2:
-        print("goodbye")
+            print("Invalid choice! Please enter 1 or 2.")
+            
+    except ValueError:
+        print("Please enter a valid number (1 or 2)!")
+    except KeyboardInterrupt:
+        print("\n👋 Program interrupted. Goodbye!")
         break
-    else:
-        print("invalid reponse")
-
-
-
-
-
-
-
+    except Exception as e:
+        print(f"An error occurred: {e}")

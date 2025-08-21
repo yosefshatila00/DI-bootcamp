@@ -41,17 +41,11 @@ class Text:
         return unique_words_list
     
     @classmethod
-    def from_file(cls, file_path):
-       
-        try:
-            with open(file_path, 'r', encoding='utf-8') as file:
+    def from_file(cls, words):
+        with open(words, 'r', encoding='utf-8') as file:
                 content = file.read()
-            return cls(content)
-        except FileNotFoundError:
-            raise FileNotFoundError(f"The file '{file_path}' was not found.")
-        except IOError as e:
-            raise IOError(f"Error reading file '{file_path}': {e}")
-
+        return cls(content)
+        
 
 class TextModification(Text):
  
