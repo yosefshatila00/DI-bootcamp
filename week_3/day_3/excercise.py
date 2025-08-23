@@ -1,43 +1,50 @@
 import random
-import os
+import json
 
-def get_words_from_file(file_name="words.txt"):
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(script_dir, file_name)
-    
+def get_words_from_file(file_path):
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            words = file.read().split()
-            if not words:
-                raise ValueError("The words file is empty")
-            return words
+        with open(file_path, "r") as file:
+            if file_path.endswith('.json'):
+                data = json.load(file)
+                return data if isinstance(data, list) else data.get('words', [])
+            else:
+                return file.read().split()
     except FileNotFoundError:
-        print(f"Error: Could not find '{file_name}' in {script_dir}")
-        print("Please make sure the file exists in the same folder as this script.")
-        exit(1)
+        print(f"Error: File '{file_path}' not found.")
+        return []
     except Exception as e:
-        print(f"An error occurred while reading the file: {e}")
-        exit(1)
+        print(f"Error reading file: {e}")
+        return []
 
-
-def get_random_sentence(words, length):
-    random_strings=random.sample(words, length)
-    sentence=" ".join(random_strings).lower().capitalize()
-    return sentence
+def get_random_sentence(length, words_list):
+    if not words_list or length < 1:
+        return "Cannot generate sentence."
+    
+    selected_words = [random.choice(words_list) for _ in range(length)]
+    return " ".join(selected_words).lower()
 
 def main():
-    print("the code asks you how many strings you want in a sentence and it takes randomly words from a txt file to make a sentence")
-    number_words=int(input("enter number of words between 2 and 20\n"))
+    print("Random Sentence Generator")
+    print("Enter a length between 2-20 words\n")
     
-    if not 2<= number_words <=20:
-        print("choose between the limit")
+    try:
+        length = int(input("Sentence length (2-20): "))
+        if not (2 <= length <= 20):
+            print("Error: Length must be between 2-20.")
+            return
+    except ValueError:
+        print("Error: Please enter a valid number.")
         return
     
-    word=get_words_from_file()
-    sentence=get_random_sentence(word, number_words)
-    print(sentence)
-
+    file_path = "words.txt" 
+    words = get_words_from_file(file_path)
+    
+    if not words:
+        print("No words found in file.")
+        return
+    
+    sentence = get_random_sentence(length, words)
+    print(f"\nYour random sentence: {sentence}")
 
 if __name__ == "__main__":
     main()
-
