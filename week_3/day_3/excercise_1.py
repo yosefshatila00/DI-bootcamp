@@ -19,25 +19,33 @@ def get_words_from_file(file_name="words.txt"):
         print(f"An error occurred while reading the file: {e}")
         exit(1)
 
-
-def get_random_sentence(words, length):
-    random_strings=random.sample(words, length)
-    sentence=" ".join(random_strings).lower().capitalize()
+def get_random_sentence(length):
+    words = get_words_from_file()
+    selected_words = []
+    
+    for _ in range(length):
+        selected_words.append(random.choice(words))
+    
+    sentence = " ".join(selected_words).lower()
     return sentence
 
 def main():
-    print("the code asks you how many strings you want in a sentence and it takes randomly words from a txt file to make a sentence")
-    number_words=int(input("enter number of words between 2 and 20\n"))
+    print("This program generates a random sentence from words in a text file.")
+    print("You can choose how many words you want in the sentence (between 2 and 20).")
     
-    if not 2<= number_words <=20:
-        print("choose between the limit")
-        return
+    while True:
+        try:
+            number_words = int(input("Enter number of words between 2 and 20: "))
+            
+            if 2 <= number_words <= 20:
+                break
+            else:
+                print("Please choose a number between 2 and 20.")
+        except ValueError:
+            print("Please enter a valid number.")
     
-    word=get_words_from_file()
-    sentence=get_random_sentence(word, number_words)
-    print(sentence)
-
+    sentence = get_random_sentence(number_words)
+    print(f"\nYour random sentence:\n{sentence}")
 
 if __name__ == "__main__":
     main()
-
